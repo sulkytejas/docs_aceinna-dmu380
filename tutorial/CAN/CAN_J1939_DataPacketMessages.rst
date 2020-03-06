@@ -36,6 +36,28 @@ The rate of data messages can be configured by SET commands.
 |
 |
 |
+
+.. table:: *Data message for INS application*
+    :align: left
+
+    +-------------------+--------+--------+----------+---------------------+---------------------------------+
+    | **Data Packet**   | **PF** | **PS** | **PGN**  | **Data Length**     |  **Purpose**                    |
+    |                   | (dec)  | (dec)  |   (dec)  | (bytes)             |                                 |
+    +-------------------+--------+--------+----------+---------------------+---------------------------------+
+    || GPS              | 248    | 01     | 63489    |  8                  || Provide high accuracy          |
+    || Position Data    |        |        |          |                     || latitude & longitude rates     |
+    +-------------------+--------+--------+----------+---------------------+---------------------------------+
+    || Rapid            | 248    | 02     | 63490    |  8                  || Provide high accuracy          |
+    || Update Data      |        |        |          |                     || cog and sog                    |
+    +-------------------+--------+--------+----------+---------------------+---------------------------------+
+    || Attitude         | 241    | 35     | 61721    |  8                  || Provide high accuracy          |
+    || Data             |        |        |          |                     || yaw, pitch and roll            |
+    +-------------------+--------+--------+----------+---------------------+---------------------------------+
+   
+
+|
+|
+|
 	
 **Slope Sensor Information - Type 2 (SSI2) Data Packet**
 
